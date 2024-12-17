@@ -1,0 +1,291 @@
+/* Main Container */
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    background: #ffffff;
+    color: #000000;
+    font-family: sans-serif;
+}
+
+/* Header */
+.chat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    background: #ffffff;
+    border-bottom: 1px solid #ffffff;
+}
+
+.chat-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.chat-brand img {
+    padding-bottom: 4rem;
+    height: 3rem;
+    object-fit: contain;
+}
+
+.university-logo {
+    height: 8rem;
+    object-fit: contain;
+}
+
+/* Main Chat Section */
+.chat-main {
+    flex: 1;
+    padding: 1.5rem;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center; /* Center vertically */
+}
+
+.chat-welcome {
+    text-align: center;
+    color: #ffffff; /* White text for better contrast with gradient */
+    background: linear-gradient(135deg, #478ffc, #860000); /* Define your gradient */
+    -webkit-background-clip: text; /* Apply gradient to text only */
+    -webkit-text-fill-color: transparent; /* Make text transparent so gradient shows through */
+    padding: 1rem; /* Optional: Add padding to enhance appearance */
+    border-radius: 8px; /* Optional: Add rounded corners for a smoother look */
+}
+
+
+.chat-welcome h1 {
+    padding-top: 150px;
+    font-size: 3.8rem;
+    font-family:  sans-serif;
+    padding-left: 20px;
+    background: linear-gradient(155deg, #478ffc, #860000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: -20px;
+}
+
+.chat-welcome p {
+    font-size: 2.5rem;
+    text-align: left;
+    font-family: 'Arial', sans-serif;
+    font-weight: 600;
+    color: #540000; /* Default fallback for text color */
+}
+
+
+/* Chat Bubbles */
+.chat-response {
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    gap: 1rem;
+}
+
+/* User Query Bubble */
+.user-query {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    background: #eceaea; /* Remove background color */
+    padding: 10px 15px; /* Retain padding for spacing */
+    border-radius: 8px; /* Keep rounded corners */
+    color: #000; /* Black text for better contrast */
+    word-wrap: break-word; /* Ensure long text wraps */
+    white-space: pre-wrap; /* Preserve newlines and spaces */
+}
+
+/* AI Response Bubble */
+.ai-response {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row-reverse;
+    gap: 10px;
+    background: #ffffff; /* White background */
+    padding: 10px 15px;
+    border-radius: 8px;
+    color: #000; /* Black text for consistency */
+    word-wrap: break-word; /* Ensure long text wraps */
+    white-space: pre-wrap; /* Preserve newlines and spaces */
+}
+
+
+.user-query img{
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+.ai-response img{
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+.ai-response {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+}
+
+.ai-response img {
+    margin-left: 10px;
+}
+
+.ai-response p {
+    flex: 1;
+    word-wrap: break-word;
+    font-size: 1rem;
+    color: #e3e3e3;
+}
+
+/* Loading Spinner */
+.loading-spinner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.loading-spinner .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #888;
+    animation: blink 1s infinite;
+}
+
+.loading-spinner .dot:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.loading-spinner .dot:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 0.2;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+/* Response Actions */
+.response-actions {
+    display: flex;
+    gap: 5px;
+    justify-content: flex-start;
+}
+
+.action-btn {
+    background: #f3f3f3;
+    border: none;
+    padding: 8px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.action-btn:hover {
+    background: #ddd;
+}
+
+.action-btn img {
+    width: 15px;
+    height: 15px;
+}
+
+/* Footer */
+.chat-footer {
+    background: #ffffff;
+    padding: 1rem 1.5rem;
+    border-top: 1px solid #ffffff;
+    flex-direction: column;
+    display: flex; /* Enable flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+/* Input Section Styling (ChatGPT-like) */
+.input-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 60vw; /* Full width of the footer */
+    padding: 10px; /* Add padding around the section */
+    background: #ffffff;
+}
+
+.input-section textarea {
+    flex: 1;
+    padding: 12px 15px; /* Padding for comfortable typing */
+    background: #f3f3f3; /* Slightly off-white background */
+    border: 1px solid #f0f0f0; /* Light border */
+    border-radius: 8px; /* Rounded corners */
+    font-size: 1rem;
+    font-family: 'Arial', sans-serif;
+    color: #000;
+    outline: none; /* Remove default focus outline */
+    resize: none; /* Prevent manual resizing */
+    overflow-y: auto; /* Allow scrolling inside the text area */
+    min-height: 40px; /* Minimum height for single-line input */
+    max-height: 150px; /* Maximum height for expanded input */
+    width: 60vw; /* Fixed width */
+    transition: border-color 0.2s, box-shadow 0.2s; /* Smooth focus effects */
+    box-sizing: border-box; /* Ensure padding is included in width calculation */
+}
+
+.input-section textarea:focus {
+    border-color: #cacaca; /* Subtle focus effect */
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.1); /* Glow on focus */
+}
+
+/* Add a custom scrollbar for better UX */
+.input-section textarea::-webkit-scrollbar {
+    width: 8px;
+}
+
+.input-section textarea::-webkit-scrollbar-thumb {
+    background: #cccccc;
+    border-radius: 8px;
+}
+
+.input-section textarea::-webkit-scrollbar-thumb:hover {
+    background: #aaaaaa;
+}
+
+
+.mic-btn, .send-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mic-btn img, .send-btn img {
+    width: 24px;
+    height: 24px;
+    filter: invert(40%); /* Light gray icons */
+    transition: filter 0.2s;
+}
+
+.mic-btn:hover img, .send-btn:hover img {
+    filter: invert(20%); /* Darker on hover */
+}
+
+
+.footer-note {
+    font-size: 0.9rem;
+    color: #888;
+    margin-top: 10px;
+    text-align: center;
+}

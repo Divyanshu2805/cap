@@ -1,0 +1,161 @@
+/* Base styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+  }
+  
+  .login-page {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("../assets/HostelM.jpg"); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2); /* Adjustable opacity */
+    z-index: 1;
+  }
+  
+  .header-container {
+    display: flex;
+    height: 2rem;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+  
+  .thapar-logo {
+    width: 50px; /* Adjust size as needed */
+    height: auto;
+    margin-right: 10px;
+  }
+  
+  .form-container {
+    position: relative;
+    z-index: 2;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    padding: 2rem;
+    width: 100%;
+    max-width: 350px;
+    text-align: center;
+  }
+  
+  .form-title {
+    margin: 0 0 1rem;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #323131;
+  }
+  
+  .form-subtext {
+    margin-bottom: 1.5rem;
+    color: #666;
+  }
+  
+  .form-link {
+    color: #d43d38; /* Matches red theme */
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .form-link:hover {
+    text-decoration: underline;
+  }
+  
+  .floating-label {
+    position: relative;
+    margin-bottom: 0.85rem;
+  }
+  
+  .floating-label input {
+    width: 90%;
+    padding: 1rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    background: transparent;
+    color: #333;
+  }
+  
+  .floating-label input:focus {
+    outline: none;
+    border-color: #d9534f; /* Highlight border in red */
+    box-shadow: 0 0 6px rgba(217, 83, 79, 0.3); /* Soft red glow */
+  }
+  
+  .floating-label label {
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-50%);
+    font-size: 0.9rem;
+    color: #aaa;
+    pointer-events: none;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .floating-label input:focus + label,
+  .floating-label input:not(:placeholder-shown) + label {
+    top: 0;
+    left: 0.5rem;
+    font-size: 0.75rem;
+    color: #d9534f;
+    background: #fff;
+    padding: 0 0.2rem;
+  }
+  
+  .options-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    color: #666;
+  }
+  
+  .forgot-password-link {
+    color: #d43d38;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  
+  .forgot-password-link:hover {
+    text-decoration: underline;
+  }
+  
+  .submit-btn {
+    width: 100%;
+    padding: 0.9rem;
+    background-color: #c42721; /* Red theme for the button */
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+  }
+  
+  .submit-btn:disabled {
+    background-color: #a0a0a0;
+    cursor: not-allowed;
+  }
+  
+  .submit-btn:hover:enabled {
+    background-color: #a31d2a;
+    transform: scale(1.04);
+  }
+  

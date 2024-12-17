@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat with Bot</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .chat-container { width: 500px; margin: 0 auto; }
+        .chat-container form { margin-bottom: 20px; }
+        .chat-container textarea { width: 100%; padding: 10px; }
+        .chat-container button { padding: 10px; }
+        .chat-container .response { margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <div class="chat-container">
+        <h1>Ask your question</h1>
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Ask</button>
+        </form>
+
+        {% if response %}
+            <div class="response">
+                <h2>Bot's Response:</h2>
+                <p>{{ response }}</p>
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>

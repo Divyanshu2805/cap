@@ -1,0 +1,146 @@
+/* Sidebar Container */
+.sidebar {
+    width: 80px;
+    height: 100vh;
+    background: #620000;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: width 0.3s ease;
+    overflow: hidden;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.sidebar.expanded {
+    width: 340px;
+}
+
+/* Header Section */
+.sidebar-header {
+    padding-top: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 0.5rem;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+    
+}
+
+.menu-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding-left: 10px;
+    transition: transform 0.2s ease;
+}
+
+.menu-toggle:hover {
+    transform: scale(1.08);
+}
+
+.menu-toggle img {
+    width: 20px;
+    height: 20px;
+}
+
+.new-chat-btn {
+    display: flex;
+    align-items: right;
+    gap: 10px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+    color: #ffffff;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.new-chat-btn:hover {
+    background: #860000;
+    transform: scale(1.03);
+}
+
+.new-chat-btn img {
+    width: 20px;
+    height: 20px;
+}
+
+/* Recent Chats */
+/* Recent Chats Scrollbar Customization */
+.recent-chats {
+    overflow-y: auto;
+    background: #620000;
+    flex: 1;
+    padding: 0rem 1rem;
+    scrollbar-width: thin;
+    scrollbar-color: #900000 #620000; 
+}
+
+.recent-chats h3 {
+    font-size: 1.2rem;
+    color: #ddd;
+    margin-bottom: 0.5rem;
+}
+
+.chat-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+}
+
+.chat-item:hover {
+    background: #860000;
+}
+
+.chat-item img {
+    width: 20px;
+    height: 20px;
+}
+
+.chat-item span {
+    font-size: 0.9rem;
+    color: #ddd;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Footer Options */
+.sidebar-footer {
+    display: flex;
+    margin-bottom: 5px;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 5px;
+}
+
+.sidebar-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.sidebar-option:hover {
+    background: #860000;
+    transform: scale(1.03);
+}
+
+.sidebar-option img {
+    width: 20px;
+    height: 20px;
+}
+
+.sidebar-option span {
+    font-size: 0.9rem;
+    color: #ffffff;
+}
